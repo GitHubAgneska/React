@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class AddTodo extends Component {
     state = { 
-        name: ''
+        title: ''
     }
 
     onChange = (e) => {
@@ -11,18 +12,18 @@ export class AddTodo extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.addTodo(this.state.name);
-        this.setState({ name: ''});
+        this.props.addTodo(this.state.title);
+        this.setState({ title: ''});
     }
 
     render() {
         return (
             <form onSubmit={this.onSubmit} style={{display: 'flex'}}>
                 <input type="text"
-                        name="name" 
+                        name="title" 
                         placeholder="Add todo"
                         style={{'flex': '10', padding:'5px', border:'none', borderRadius: '12px'}} 
-                        value={this.state.name}
+                        value={this.state.title}
                         onChange={this.onChange}
                         />
                 <input type="submit" 
@@ -33,6 +34,11 @@ export class AddTodo extends Component {
             </form>
         )
     }
+}
+
+// PropTypes
+AddTodo.propTypes = {
+    addTodo: PropTypes.func.isRequired,
 }
 
 export default AddTodo

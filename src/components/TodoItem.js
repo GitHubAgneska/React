@@ -13,7 +13,7 @@ export class TodoItem extends Component {
 
     render() {
         // destructering
-        const { id, name } = this.props.todo;
+        const { id, title} = this.props.todo;
         return (
         <div style={this.getStyle()}>
             <p>
@@ -21,7 +21,7 @@ export class TodoItem extends Component {
                     type="checkbox"
                     onChange={this.props.markCompleted.bind(this, id)}
                 />{' '}
-                {name }
+                {title}
                 <button onClick={this.props.delTodo.bind(this, id)} 
                     style={btnStyle}>x</button>
             </p>
@@ -30,17 +30,16 @@ export class TodoItem extends Component {
     }
 }
 
-// PropTypes
+// PropTypes => add to all needing components 
 TodoItem.propTypes = {
-    todo: PropTypes.object.isRequired
+    todo: PropTypes.object.isRequired,
+    todos: PropTypes.array.isRequired,
+    markCompleted: PropTypes.func.isRequired,
+    delTodo: PropTypes.func.isRequired,
 }
 
-/* static style - alternative to inline style ( use with single {} )
+//  static style - alternative to inline style ( use with single {} ) and css file
 
-const itemStyle = {
-    backgroundColor: '#f4f4f4'
-} 
-*/
 const btnStyle = {
     background: '#f6f6f6',
     color: '#H8H8H8',

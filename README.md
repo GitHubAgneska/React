@@ -26,8 +26,23 @@ package to generate random ids (to prevent errors when submitting new state obje
 
     npm i react-uuid
 
-
 ----
+
+add router
+
+    npm i react-router-dom
+
+---
+Http calls -- 
+
+Json fake backend
+https://jsonplaceholder.typicode.com/
+
+    npm i axios
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
