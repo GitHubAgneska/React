@@ -1,7 +1,33 @@
 
+based on tutorials:
 
-npx create-react-app my-app
+official react documentation: 
+https://reactjs.org/tutorial/tutorial.html
 
+youtube Traversy react crash course:
+https://www.youtube.com/watch?v=sBws8MSXN7A
+
+___
+
+    npx create-react-app my-app
+
+add extension es7 react/redux/GraphQL/.. 
+=> create new class based component + init comp shortcut:
+
+    rce tab
+
+=> create new function based component + init code:
+
+    rcf tab 
+
+----
+
+package to generate random ids (to prevent errors when submitting new state object )
+
+    npm i react-uuid
+
+
+----
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
